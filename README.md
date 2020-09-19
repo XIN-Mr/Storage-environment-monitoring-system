@@ -1,2 +1,19 @@
-# Storage-environment-monitoring-system
-Storage environment monitoring system based on STM32
+### 1、一些配置信息的更改
+	·打开./User/ESP8266/bsp_esp8266.h修改成自己热点的SSID、密码；
+		macUser_ESP8266_ApSsid = "";
+		macUser_ESP8266_ApPwd  = "";
+
+	·进入./User/Test/修改test.c的设备ID、APIKEY、三个数据接口的ID
+		DEVICEID="14106"；
+		APIKEY = "06040b51e"；
+		TEMP="13972"、HUMI="13971"、LIGHT="13974"、HUMAN="13926"
+
+
+### 2、开机---等待几秒连接好WIFI、TCP---最后TFT—LCD屏就显示出环境监测界面了
+
+
+### 3、微信小程序搜索“贝壳物联”打开，
+	·登录你的贝壳物联平台账号，注意是用户名，比如我的用户名是xin_mr，用户账号就填xin_mr，
+	·登录完就可以看到你的设备上线（变绿色），
+	·可以显示所有接口的传感数据及其对应的历史数据曲线（点进去就可以跳转到历史数据页面了）
+	·也可以发送控制命令消息（可自定义按钮）
